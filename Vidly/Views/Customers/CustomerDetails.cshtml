@@ -7,4 +7,13 @@
 <h1>Customers Details</h1>
 
 <p>@Model.Name</p>
+<ul>
+    <li>MembershipType: @Model.MembershipType.Name</li>
+
+    @{var birthdate = Model.BirthDate.HasValue ? Model.BirthDate.Value.ToString("d") : null;}
+    @if (!String.IsNullOrEmpty(birthdate))
+        {
+        <li>BirthDate: @birthdate</li>
+    }
+</ul>
 
