@@ -1,5 +1,7 @@
 ﻿using System.Collections.Generic;
+using System.Linq;
 using System.Web.Mvc;
+using Vidly.DAL;
 using Vidly.Models;
 using Vidly.ViewModels;
 
@@ -7,10 +9,7 @@ namespace Vidly.Controllers
 {
     public class MoviesController : Controller
     {
-        private List<Movie> movies = new List<Movie> {
-            new Movie {Id = 1, Name = "Shrek"},
-            new Movie {Id = 2, Name = "Wall-e"}
-        };
+        private VidlyContext _context;
 
         // GET: Movies/Random
         public ActionResult Random()
@@ -29,7 +28,7 @@ namespace Vidly.Controllers
         {
             var model = new MoviesViewModel
             {
-                Movies = movies
+                Movies = _context.Movies.ToList()
             };
 
             return View(model);
