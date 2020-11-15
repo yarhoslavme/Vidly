@@ -9,10 +9,17 @@ namespace Vidly.Controllers
     {
         private VidlyContext _context;
 
-        public CustomersController(VidlyContext context)
+        public CustomersController()
         {
-            _context = context;
+            _context = new VidlyContext();
         }
+
+        protected override void Dispose(bool disposing)
+        {
+            base.Dispose(disposing);
+            _context.Dispose();
+        }
+
 
         // GET: Customers
         public ActionResult Index()
