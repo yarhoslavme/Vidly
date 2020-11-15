@@ -158,6 +158,14 @@
     <Compile Include="Migrations\202011150406235_ApplyAnnotationToMovieName.designer.cs">
       <DependentUpon>202011150406235_ApplyAnnotationToMovieName.cs</DependentUpon>
     </Compile>
+    <Compile Include="Migrations\202011150433444_AddNameToMembershipType.cs" />
+    <Compile Include="Migrations\202011150433444_AddNameToMembershipType.designer.cs">
+      <DependentUpon>202011150433444_AddNameToMembershipType.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Migrations\202011150434395_UpdateNameToMembershipType.cs" />
+    <Compile Include="Migrations\202011150434395_UpdateNameToMembershipType.designer.cs">
+      <DependentUpon>202011150434395_UpdateNameToMembershipType.cs</DependentUpon>
+    </Compile>
     <Compile Include="Migrations\Configuration.cs" />
     <Compile Include="Models\Customer.cs" />
     <Compile Include="Models\MembershipType.cs" />
@@ -242,6 +250,12 @@
     </EmbeddedResource>
     <EmbeddedResource Include="Migrations\202011150406235_ApplyAnnotationToMovieName.resx">
       <DependentUpon>202011150406235_ApplyAnnotationToMovieName.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Migrations\202011150433444_AddNameToMembershipType.resx">
+      <DependentUpon>202011150433444_AddNameToMembershipType.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Migrations\202011150434395_UpdateNameToMembershipType.resx">
+      <DependentUpon>202011150434395_UpdateNameToMembershipType.cs</DependentUpon>
     </EmbeddedResource>
   </ItemGroup>
   <PropertyGroup>

@@ -1,4 +1,5 @@
-﻿using System.Linq;
+﻿using System.Data.Entity;
+using System.Linq;
 using System.Web.Mvc;
 using Vidly.DAL;
 using Vidly.ViewModels;
@@ -26,7 +27,7 @@ namespace Vidly.Controllers
         {
             var model = new CustomersViewModel
             {
-                Customers = _context.Customers.ToList()
+                Customers = _context.Customers.Include(c => c.MembershipType).ToList()
             };
 
             return View(model);
